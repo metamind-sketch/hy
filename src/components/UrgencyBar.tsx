@@ -49,13 +49,13 @@ export default function UrgencyBar() {
   return (
     <div
       id="urgency-bar-container"
-      className="bg-orange-600 text-white py-2.5 px-6 shadow-md sticky top-0 z-50 overflow-hidden"
+      className="bg-[#2F1C6A] text-white py-3 px-6 shadow-md sticky top-0 z-50 overflow-hidden text-[14px]"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center z-50 flex-row gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-lg leading-none animate-wave inline-block">🔥</span>
-          <span className="font-bold text-xs sm:text-sm tracking-tight text-white">
-            Today Only: <span className="underline decoration-2 decoration-amber-300">Free .IN Domain + SSL</span> on All Plans
+          <span className="text-lg leading-none animate-wave inline-block">🎁</span>
+          <span className="font-bold text-sm sm:text-base tracking-tight text-white font-sans">
+            Today Only: <span className="underline decoration-2 decoration-amber-300">Free .IN Domain + SSL on All Plans</span> - Ends Tonight
           </span>
         </div>
         <div className="bg-white/20 border border-white/10 px-3 py-1 rounded text-xs font-mono font-bold whitespace-nowrap">

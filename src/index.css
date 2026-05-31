@@ -25,3 +25,19 @@
   animation: wave 2s infinite ease-in-out;
 }
 
+/* Custom horizontal scrollbar support */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(103, 61, 230, 0.05);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(103, 61, 230, 0.25);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(103, 61, 230, 0.45);
+}
+

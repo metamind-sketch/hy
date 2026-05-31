@@ -29,74 +29,61 @@ export default function SpeedSelector({ onSelectHosting, onSelectVps }: SpeedSel
             <Zap className="w-3.5 h-3.5 text-[#673DE6] fill-[#673DE6]" />
             <span>Optimal Architecture Selector</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-[#2F1C6A]">
-            Choose Your Speed
+          <h2 className="text-3xl md:text-[36px] font-black text-[#2F1C6A]">
+            Choose Your Hosting Speed
           </h2>
           <p className="text-[#2F1C6A]/75 text-base font-normal">
-            Whether you are writing your very first blog article or scaling a massive business catalog, we have the ideal infrastructure ready for you.
+            From your first blog to 1 lakh visitors/day, we’ve got you covered
           </p>
         </div>
 
         {/* Dynamic Speed Selector Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch max-w-5xl mx-auto mb-12">
           
-          {/* CARD A — Shared Hosting with Most Popular Badge */}
+          {/* Card 1 - Shared Hosting - White bg, Border 1px #E5E7EB, Radius 12px, Padding 32px */}
           <div
             id="speed-card-hosting"
-            className="elementor-hover-card bg-white rounded-3xl border-2 border-[#673DE6] p-8 pt-12 flex flex-col justify-between shadow-[0px_4px_16px_rgba(103,61,230,0.12)] relative overflow-hidden group transition-all duration-300 hover:translate-y-[-4px] hover:shadow-[0px_12px_24px_rgba(103,61,230,0.18)]"
+            className="elementor-hover-card bg-white rounded-xl border border-[#E5E7EB] p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group transition-all duration-300 hover:translate-y-[-4px]"
           >
-            {/* MOST POPULAR banner as requested */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#FBBF24] text-[#1E1B4B] text-[10px] font-black tracking-widest px-6 py-2 rounded-b-xl uppercase shadow-sm z-10 font-mono">
-              MOST POPULAR
-            </div>
-
             {/* Soft decorative purple accent */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-purple-50/40 rounded-bl-full pointer-events-none" />
 
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">🚀</span>
-                <span className="text-xs font-bold tracking-widest text-[#673DE6] uppercase bg-purple-50 px-3 py-1 rounded-full font-mono">
-                  Shared Hosting
+                <span className="text-xs font-bold tracking-widest text-[#2F1C6A] bg-[#EDE9FE] uppercase px-3 py-1 rounded-full font-mono">
+                  SHARED HOSTING
                 </span>
               </div>
 
-              <h3 className="text-2xl font-extrabold text-[#2F1C6A] mb-2 group-hover:text-indigo-900 transition-colors">
-                Shared Hosting
+              <h3 className="text-xl font-extrabold text-[#2F1C6A] mb-2 group-hover:text-indigo-900 transition-colors">
+                For blogs & new websites
               </h3>
               
               <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-                For blogs & new websites
+                Our optimized standard server configuration for small websites and blogs.
               </p>
 
               {/* Exact Features requested */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-purple-50 text-[#673DE6] flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs font-bold">✓</span>
-                  </div>
-                  <span className="text-sm font-semibold text-[#2F1C6A]">Free .IN Domain</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-[#1F2937]">Free .IN Domain</span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-purple-50 text-[#673DE6] flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs font-bold">✓</span>
-                  </div>
-                  <span className="text-sm font-semibold text-[#2F1C6A]">Free SSL Certificate</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-[#1F2937]">Free SSL Certificate</span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-purple-50 text-[#673DE6] flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs font-bold">✓</span>
-                  </div>
-                  <span className="text-sm font-semibold text-[#2F1C6A]">100GB SSD Storage</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-[#1F2937]">100GB SSD Storage</span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-purple-50 text-[#673DE6] flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs font-bold">✓</span>
-                  </div>
-                  <span className="text-sm font-semibold text-[#2F1C6A]">24/7 Tamil Support</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-[#1F2937]">24/7 Tamil Support</span>
                 </div>
               </div>
             </div>
@@ -105,7 +92,7 @@ export default function SpeedSelector({ onSelectHosting, onSelectVps }: SpeedSel
               <div className="border-t border-purple-50 pt-6 mb-6">
                 <div className="text-[10px] text-gray-400 uppercase tracking-widest font-black">STARTING PRICE</div>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-black text-[#2F1C6A]">₹59</span>
+                  <span className="text-4xl font-extrabold text-[#2F1C6A]">₹59</span>
                   <span className="text-sm text-gray-500 font-medium">/mo</span>
                 </div>
               </div>
@@ -120,75 +107,75 @@ export default function SpeedSelector({ onSelectHosting, onSelectVps }: SpeedSel
             </div>
           </div>
 
-          {/* CARD B — Need More Power? ⚡ */}
+          {/* Card 2 - Cloud VPS - Dark bg #1E1B4B, White text, Radius 12px, Padding 32px */}
           <div
             id="speed-card-vps"
-            className="elementor-hover-card bg-gradient-to-b from-[#2F1C6A] to-[#1F124A] text-white rounded-3xl p-8 flex flex-col justify-between shadow-[0px_4px_16px_rgba(103,61,230,0.12)] relative overflow-hidden group transition-all duration-300 border border-[#2F1C6A] hover:translate-y-[-4px] hover:shadow-[0px_12px_24px_rgba(103,61,230,0.18)] hover:border-purple-400"
+            className="elementor-hover-card bg-[#1E1B4B] text-white rounded-xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden group transition-all duration-300 border border-purple-900/40 hover:translate-y-[-4px]"
           >
-            {/* Top right glow */}
+            {/* Ribbon top MOST POPULAR */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#FBBF24] text-[#1E1B4B] text-[10px] font-black tracking-widest px-6 py-2 rounded-b-xl uppercase shadow-sm z-10 font-mono">
+              MOST POPULAR
+            </div>
+
+            {/* Top right decorative glow */}
             <div className="absolute top-0 right-0 w-36 h-36 bg-purple-500/15 rounded-full blur-2xl pointer-events-none" />
 
-            <div>
+            <div className="pt-4">
               <div className="flex items-center gap-2 mb-4 justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl">⚡</span>
-                  <span className="text-xs font-bold tracking-widest text-[#2F1C6A] bg-[#EDE9FE] uppercase px-3 py-1 rounded-full inline-block font-mono">
-                    Need Power?
+                  <span className="text-2xl">☁️</span>
+                  <span className="text-xs font-bold tracking-widest text-white bg-[#312E81] uppercase px-3 py-1 rounded-full inline-block font-mono">
+                    CLOUD VPS SERVERS
                   </span>
-                </div>
-                <div className="text-amber-400 font-extrabold text-[10px] uppercase font-mono tracking-widest border border-amber-400/35 px-2 py-0.5 rounded-sm">
-                  DEDICATED CORE
                 </div>
               </div>
 
-              <h3 className="text-2xl font-extrabold text-white mb-2 font-sans">
-                Cloud VPS Servers
+              <h3 className="text-xl font-extrabold text-white mb-2 font-sans">
+                For business & 1 Lakh+ traffic
               </h3>
 
               <p className="text-indigo-200 text-sm mb-6 leading-relaxed">
-                For business & 1 Lakh+ traffic.
+                Dedicated virtual cores mapped directly to high speed enterprise node.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-indigo-900/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-700">
-                    <Check className="w-3.5 h-3.5 font-bold" />
-                  </div>
-                  <span className="text-sm font-semibold text-indigo-50">Dedicated RAM. Smoothly Handle Traffic Spikes</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-indigo-50">Dedicated RAM & CPU</span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-indigo-900/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-700">
-                    <Check className="w-3.5 h-3.5 font-bold" />
-                  </div>
-                  <span className="text-sm font-semibold text-indigo-50">Drastically more speed</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-indigo-50">Handle Traffic Spikes Easily</span>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-indigo-900/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-700">
-                    <Check className="w-3.5 h-3.5 font-bold" />
-                  </div>
-                  <span className="text-sm font-semibold text-indigo-50">Better isolation and stability</span>
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-indigo-50">Full Root Access</span>
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <span className="text-[#10B981] font-bold">✓</span>
+                  <span className="text-sm font-semibold text-indigo-50">Server Isolation</span>
                 </div>
               </div>
             </div>
 
             <div>
               <div className="border-t border-purple-900/80 pt-6 mb-6">
-                <div className="text-[10px] text-indigo-300 uppercase tracking-widest font-black">Starting Price</div>
+                <div className="text-[10px] text-indigo-300 uppercase tracking-widest font-black">STARTING PRICE</div>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-black text-white">₹199</span>
-                  <span className="text-sm text-indigo-200 font-medium">/mo</span>
+                  <span className="text-4xl font-extrabold text-white">₹199</span>
+                  <span className="text-sm text-indigo-200 font-medium font-sans">/mo</span>
                 </div>
               </div>
 
               <button
                 id="select-speed-vps-btn"
                 onClick={onSelectVps}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-center py-4 px-6 rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 group/btn shadow-xs hover:shadow-lg hover:shadow-emerald-500/10"
+                className="w-full bg-[#673DE6] hover:bg-[#5025D1] text-white font-extrabold text-center py-4 px-6 rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 group/btn shadow-xs hover:shadow-lg hover:shadow-indigo-600/10"
               >
-                <span>Go Pro</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
+                <span>Go Pro →</span>
               </button>
             </div>
           </div>

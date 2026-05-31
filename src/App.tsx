@@ -5,6 +5,7 @@
 
 import { useState } from "react";
 import UrgencyBar from "./components/UrgencyBar";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SpeedSelector from "./components/SpeedSelector";
 import WhyTrustUs from "./components/WhyTrustUs";
@@ -48,6 +49,9 @@ export default function App() {
     <div id="app-root" className="min-h-screen flex flex-col bg-white text-gray-900 font-sans selection:bg-indigo-100 selection:text-[#2F1C6A]">
       {/* 1. Sticky Urgency Bar */}
       <UrgencyBar />
+
+      {/* 2. Top Header Navigation */}
+      <Header />
 
       {/* Main content flow */}
       <main className="flex-1">

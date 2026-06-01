@@ -6,6 +6,15 @@
 import { useState } from "react";
 import { Server, Cpu, HardDrive, Cpu as Memory, ShieldCheck, Zap, Layers, MessageSquare } from "lucide-react";
 
+// @ts-ignore
+import dellImage from "../assets/images/dell_poweredge_1780267925761.png";
+// @ts-ignore
+import hpe360Image from "../assets/images/hpe_proliant_360_1780267948431.png";
+// @ts-ignore
+import hpe385Image from "../assets/images/hpe_proliant_385_1780267967470.png";
+// @ts-ignore
+import ciscoImage from "../assets/images/cisco_ucs_1780267988361.png";
+
 interface ServerSpec {
   id: string;
   name: string;
@@ -29,7 +38,7 @@ const SERVER_DATA: ServerSpec[] = [
     name: "PowerEdge R650xs",
     brand: "Dell EMC",
     imageAlt: "Dell PowerEdge R650xs Server Chassis",
-    imageSrc: "/src/assets/images/dell_poweredge_1780267925761.png",
+    imageSrc: dellImage,
     cores: "Up to 64 Physical Cores",
     processors: "Dual 3rd Gen Intel® Xeon® Scalable Processors",
     ramType: "3200MT/s DDR4 ECC Registered RAM",
@@ -45,7 +54,7 @@ const SERVER_DATA: ServerSpec[] = [
     name: "ProLiant DL360 Gen10 Plus",
     brand: "HPE",
     imageAlt: "HPE ProLiant DL360 Gen10 Plus 1U Rack Server",
-    imageSrc: "/src/assets/images/hpe_proliant_360_1780267948431.png",
+    imageSrc: hpe360Image,
     cores: "Up to 80 Threads",
     processors: "Intel® Xeon® Gold Scalable Family with Turbo Boost",
     ramType: "HPE SmartMemory DDR4 Regional Nodes",
@@ -61,7 +70,7 @@ const SERVER_DATA: ServerSpec[] = [
     name: "ProLiant DL385 Gen11 Plus",
     brand: "HPE",
     imageAlt: "HPE ProLiant DL385 Gen11 Plus High Density 2U Storage",
-    imageSrc: "/src/assets/images/hpe_proliant_385_1780267967470.png",
+    imageSrc: hpe385Image,
     cores: "Up to 128 Cores / 256 Threads",
     processors: "Dual AMD EPYC™ 9004 Series High-Frequency processors",
     ramType: "Hyper-Dense DDR5 Register Memory (4800 MT/s)",
@@ -77,7 +86,7 @@ const SERVER_DATA: ServerSpec[] = [
     name: "UCS C240 M6 Rack Server",
     brand: "Cisco",
     imageAlt: "Cisco Unified Computing System (UCS) C240 series rack",
-    imageSrc: "/src/assets/images/cisco_ucs_1780267988361.png",
+    imageSrc: ciscoImage,
     cores: "Up to 80 Hyper-threaded Core Units",
     processors: "3rd Gen Intel® Xeon® Scalable Processor Grid",
     ramType: "Intel® Optane™ Persistent Memory Support + ECC RAM",
@@ -135,13 +144,13 @@ export default function Infrastructure() {
               </div>
 
               {/* Active Server Image with Transition */}
-              <div className="my-4 rounded-2xl overflow-hidden border border-purple-100 shadow-sm bg-indigo-50/20 max-h-[220px] flex items-center justify-center">
+              <div className="my-4 rounded-2xl overflow-hidden border border-purple-100 shadow-sm bg-indigo-50/20 min-h-[160px] sm:min-h-[200px] max-h-[220px] flex items-center justify-center p-3">
                 <img
                   key={selectedServer.id}
                   src={selectedServer.imageSrc}
                   alt={selectedServer.imageAlt}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain aspect-video hover:scale-105 transition-transform duration-500"
+                  className="max-w-full max-h-[155px] sm:max-h-[185px] object-contain hover:scale-105 transition-transform duration-500"
                 />
               </div>
 

@@ -49,17 +49,25 @@ export default function UrgencyBar() {
   return (
     <div
       id="urgency-bar-container"
-      className="bg-[#2F1C6A] text-white py-3 px-6 shadow-md sticky top-0 z-50 overflow-hidden text-[14px]"
+      className="bg-gradient-to-r from-[#1E1145] via-[#2F1C6A] to-[#1E1145] text-white py-2 px-4 md:px-8 border-b border-[#673DE6]/20 sticky top-0 z-50 shadow-[0_1px_3px_rgba(47,28,106,0.1)] text-[13px]"
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center z-50 flex-row gap-4">
-        <div className="flex items-center gap-2">
-          <span className="text-lg leading-none animate-wave inline-block">🎁</span>
-          <span className="font-bold text-sm sm:text-base tracking-tight text-white font-sans">
-            Today Only: <span className="underline decoration-2 decoration-amber-300">Free .IN Domain + SSL on All Plans</span> - Ends Tonight
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+          <span className="flex h-2 w-2 relative shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
+          <span className="bg-amber-400 text-[#1E1145] text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-md shadow-xs select-none">
+            LIMITED TIME
+          </span>
+          <p className="font-medium text-purple-100 font-sans tracking-wide text-xs sm:text-[13px]">
+            Get a <span className="text-white font-extrabold underline decoration-amber-300 decoration-2 underline-offset-2">Free .IN Domain & Free Unlimited SSL</span> with Any Annual Hosting Plan
+          </p>
         </div>
-        <div className="bg-white/20 border border-white/10 px-3 py-1 rounded text-xs font-mono font-bold whitespace-nowrap">
-          Ends in: {formatTime(timeLeft)}
+        <div className="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold whitespace-nowrap transition-colors duration-150 shadow-inner select-none">
+          <Clock className="w-3 h-3 text-amber-300 animate-pulse" />
+          <span className="text-purple-200">ENDS IN:</span>
+          <span className="text-amber-300 tracking-wider font-extrabold">{formatTime(timeLeft)}</span>
         </div>
       </div>
     </div>

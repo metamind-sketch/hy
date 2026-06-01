@@ -47,18 +47,16 @@ export default function FinalCTA({ onYesHostMySiteNow }: FinalCTAProps) {
           </div>
 
           {/* Visual trust pillars */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-6 text-[#2F1C6A]/80 font-bold text-xs font-sans">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-6 text-[#2F1C6A] text-xs font-sans font-semibold">
+            <div className="flex items-center gap-2 bg-[#F5F3FF] border border-[#673DE6]/10 rounded-full px-4 py-2 shadow-xs transition-colors hover:bg-[#EEF2FF] hover:border-[#673DE6]/20">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
               <span>Fast Setup in 10 Mins</span>
             </div>
-            <div className="h-4 w-px bg-indigo-150 hidden md:block" />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-[#F5F3FF] border border-[#673DE6]/10 rounded-full px-4 py-2 shadow-xs transition-colors hover:bg-[#EEF2FF] hover:border-[#673DE6]/20">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
               <span>Tamil Support 24/7/365</span>
             </div>
-            <div className="h-4 w-px bg-indigo-150 hidden md:block" />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-[#F5F3FF] border border-[#673DE6]/10 rounded-full px-4 py-2 shadow-xs transition-colors hover:bg-[#EEF2FF] hover:border-[#673DE6]/20">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
               <span>Free Zero-Downtime Migration</span>
             </div>

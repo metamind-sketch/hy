@@ -7,6 +7,8 @@ import { useState } from "react";
 import { ShieldCheck, ArrowRight, Sparkles, HelpCircle, CheckCircle2, Languages, PhoneCall, RefreshCw, MessageSquareCode } from "lucide-react";
 import { QUIZ_QUESTIONS, HOSTING_PLANS } from "../data";
 import { HostingPlan } from "../types";
+// @ts-ignore
+import heroImage from "../assets/images/tamilhost_hero_server_dashboard_1780271052465.png";
 
 interface HeroProps {
   onPlanSelect: (plan: HostingPlan) => void;
@@ -21,7 +23,7 @@ export default function Hero({ onPlanSelect, onScrollToPlans }: HeroProps) {
   const [recommendedPlan, setRecommendedPlan] = useState<HostingPlan | null>(null);
 
   // Dedicated SVG illustration placeholder as requested by the user
-  const heroImageSrc = "/src/assets/images/tamilhost_hero_server_dashboard_1780271052465.png";
+  const heroImageSrc = heroImage;
 
   const resetQuiz = () => {
     setCurrentQuizStep(0);
@@ -78,8 +80,8 @@ export default function Hero({ onPlanSelect, onScrollToPlans }: HeroProps) {
               <h1 className="text-4xl md:text-5xl lg:text-[48px] font-black text-[#2F1C6A] tracking-tight leading-[1.1] font-sans">
                 From Your First Blog to <span className="text-[#673DE6]">1 Lakh Visitors/Day</span>
               </h1>
-              <h2 className="text-3xl md:text-4xl lg:text-[48px] font-black text-[#673DE6] tracking-tight leading-[1.1] font-sans">
-                Hosting That Grows With You
+              <h2 className="text-3xl md:text-4xl lg:text-[48px] font-black text-[#2F1C6A] tracking-tight leading-[1.1] font-sans">
+                Hosting That <span className="text-[#673DE6]">Grows With You</span>
               </h2>
             </div>
 
@@ -127,11 +129,11 @@ export default function Hero({ onPlanSelect, onScrollToPlans }: HeroProps) {
           </div>
 
           {/* Right Image Container (Bento Card) */}
-          <div className="lg:col-span-4 bg-white rounded-3xl p-5 border border-purple-100 shadow-[0px_4px_16px_rgba(103,61,230,0.08)] flex flex-col justify-center items-center relative overflow-hidden transition-transform duration-300 hover:translate-y-[-2px]">
+          <div className="lg:col-span-4 bg-white rounded-3xl p-6 border border-purple-100 shadow-[0px_4px_16px_rgba(103,61,230,0.08)] flex flex-col justify-center items-center relative overflow-hidden transition-transform duration-300 hover:translate-y-[-2px] min-h-[380px] lg:min-h-0">
             {/* Background pattern */}
             <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-transparent pointer-events-none" />
 
-            <div className="relative w-full max-w-sm flex flex-col justify-between items-center h-full z-10 pt-2">
+            <div className="relative w-full max-w-sm flex flex-col justify-between items-center h-full z-10 pt-4">
               {/* Badge for 1.2s local speed */}
               <div className="absolute -top-1 -left-1 bg-orange-600 text-white rounded-xl py-2 px-3 shadow-md z-10 flex flex-col items-center">
                 <span className="text-[9px] uppercase font-black tracking-widest opacity-90">Speed</span>
@@ -139,17 +141,17 @@ export default function Hero({ onPlanSelect, onScrollToPlans }: HeroProps) {
               </div>
 
               {/* Dynamic support interaction indicator */}
-              <div className="absolute -top-1 -right-1 bg-white/95 border border-purple-150 rounded-full py-1 px-3 shadow-xs z-10 flex items-center gap-1.5 text-[10px] font-bold text-[#673DE6]">
+              <div className="absolute -top-1 -right-1 bg-white/95 border border-purple-150 rounded-full py-1.5 px-3 shadow-xs z-10 flex items-center gap-1.5 text-[10px] font-bold text-[#673DE6]">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>Support Native Tamil</span>
               </div>
 
-              <div className="w-full mt-10 mb-4 overflow-hidden rounded-2xl border border-purple-100">
+              <div className="w-full mt-12 mb-4 overflow-hidden rounded-2xl border border-purple-100">
                 <img
                   src={heroImageSrc}
                   alt="Tamil Host customer support and speed system dashboard"
                   referrerPolicy="no-referrer"
-                  className="rounded-2xl w-full object-cover shadow-inner bg-indigo-50"
+                  className="rounded-2xl w-full object-cover shadow-inner bg-indigo-50 min-h-[180px] sm:min-h-[220px] lg:min-h-0"
                 />
               </div>
 
